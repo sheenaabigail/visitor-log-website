@@ -10,7 +10,7 @@ function VisitorLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/visitors/visitorlogin", { VisitorName, ContactNo });
+      const res = await axios.post("http://visitor-entry-log-backend.onrender.com/visitors/visitorlogin", { VisitorName, ContactNo });
       alert(res.data.message);
       // localStorage.setItem("visitorToken", res.data.token); 
       navigate("/visitorlog"); // Redirect to visitor log page

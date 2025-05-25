@@ -10,7 +10,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8080/login', { a_username, a_password });
+      const res = await axios.post('http://visitor-entry-log-backend.onrender.com/login', { a_username, a_password });
       alert(res.data.message);
 
       localStorage.setItem('token', res.data.token); 

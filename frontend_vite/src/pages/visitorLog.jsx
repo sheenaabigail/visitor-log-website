@@ -61,7 +61,7 @@ const applyDateFilter = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/entries/showall", {
+      const response = await fetch("http://visitor-entry-log-backend.onrender.com/entries/showall", {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const applyDateFilter = () => {
     if (!window.confirm("Are you sure you want to delete this entry?")) return;
 
     try {
-      const response = await fetch(`http://localhost:8080/entries/delete/${logId}`, {
+      const response = await fetch(`http://visitor-entry-log-backend.onrender.com/entries/delete/${logId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -142,7 +142,7 @@ const handleEdit = (entry) => {
 const submitEdit = async () => {
   const token = localStorage.getItem("token");
   try {
-    const response = await fetch(`http://localhost:8080/entries/update/${editEntry.LogId}`, {
+    const response = await fetch(`http://visitor-entry-log-backend.onrender.com/entries/update/${editEntry.LogId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -24,7 +24,7 @@ function Signup() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const res = await axios.post("http://localhost:8080/entries/addentry", formData);
+      const res = await axios.post("http://visitor-entry-log-backend.onrender.com/entries/addentry", formData);
       alert(res.data.message);
       localStorage.setItem("token", res.data.token);
       navigate("/");

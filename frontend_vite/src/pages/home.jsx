@@ -23,7 +23,7 @@ function Home() {
       }
 
       try {
-        const response = await fetch('http://localhost:8080/protected/home', {
+        const response = await fetch('http://visitor-entry-log-backend.onrender.com/protected/home', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
